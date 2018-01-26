@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>认识CSS样式</title>
+<style type="text/css">
+/*标签选择器*/
+h1{
+   font-size:20px;/*设置文字字号*/
+   color:blue;/*设置文字颜色*/
+   font-weight:bold;/*设置字体加粗*/
+   text-align:center;/*居中*/
+}
+/*类择器*/
+.setGreen{
+	color:green;
+}
+.bigsize{
+	font-size:50px;
+}
+/*ID选择器*/
+#setGreen{
+   color:green;
+}
+/*子选择器*/
+.first>span{border:1px solid red;}/*添加边框样式（粗细为1px， 颜色为红色的实线）*/
+
+/*包含(后代)选择器*/
+.food li{border:1px solid red;}/*添加边框样式（粗细为1px， 颜色为红色的实线）*/
+/*通用选择器，匹配html中所有标签元素。*/
+* {font-size:20px;}
+/*伪类选择符*/
+a:hover{
+    color:red;
+    
+}
+
+</style>
+
+<!--外部式css样式，写在单独的一个文件中-->
+<link href="4.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<!--优先级：内联式 > 嵌入式 > 外部式-->
+	<h1>慕课网</h1>
+<p><span>慕课网</span>，<span style="color:red"><!--内联式css样式，直接写在现有的HTML标签中-->超酷的互联网</span>、IT技术免费学习平台，创新的网络一站式学习、实践体验；服务及时贴心，内容专业、有趣易学。专注服务互联网工程师快速成为技术高手！</p>
+
+<!--ID选择器只能在文档中使用一次。与类选择器不同，在一个HTML文档中，ID选择器只能使用一次，而且仅一次。而类选择器可以使用多次。-->
+<p><span class="setGreen bigsize">东风-41</span>上一次测试是在<span id="setGreen">2016年4月</span>，美国媒体报道称美国情报机关发现这枚导弹携带了<span class="bigsize">两个分弹头</span>，这是东风-41第二次进行携带两个分弹头的发射测试。报道分析，东风-41不仅可携带多枚弹头，而且具有较强的突防能力和机动性能，此次测试说明这枚导弹技术已经逐渐成熟，有望近期实现实战部署。媒体报道称，东风-41性能将超越美国民兵-3和俄罗斯的白杨-M洲际弹道导弹，极大提高中国核力量的威慑和生存能力。</p>
+
+<!--还有一个比较有用的选择器子选择器，即大于符号(>),用于选择指定标签元素的第一代子元素。-->
+<!--伪类选择符：它允许给html不存在的标签（标签的某种状态）设置样式，比如说我们给html中一个标签元素的鼠标滑过的状态来设置字体颜色：-->
+<p class="first">对于这款新型导弹的性能，徐<span>光裕分析称</span>，现在的洲际弹道导弹一般分的界限<span>8000公里以上</span>，超过10000公里就是远程的<a href="http://www.imooc.com" target="_blank">洲际弹道导弹</a>了。如果能够达到12000公里甚至是14000公里，那就是全球覆盖，这就厉害了！东风-41的射程是非常突出的，它能够突破12000公里，这也就意味着它可以全球覆盖，在国家自己本土范围内发射就能够覆盖全球，不需要把这个弹头拿到外头去，所以这种威慑力就比较大了。</p>
+<!--：>作用于元素的第一代后代，空格作用于元素的所有后代。-->
+<h1>食物</h1>
+<ul class="food">
+    <li>水果
+        <ul>
+        	<li>香蕉</li><br />
+            <li>苹果</li><br />
+            <li>梨</li><br />
+        </ul>
+    </li>
+    <br />
+    <li>蔬菜
+    	<ul>
+        	<li>白菜</li><br />
+            <li>油菜</li><br />
+            <li>卷心菜</li><br />
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>

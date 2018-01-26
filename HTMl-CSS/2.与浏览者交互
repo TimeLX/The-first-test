@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>制作我的第一个网页</title>
+        <script type="text/javascript">
+function alertValue()
+  {
+  alert(document.getElementById('txt1').value);
+  }
+</script>
+
+        <style type="text/css">
+
+        h1{
+        	font-size:30px;
+        	color:#930;
+        	text-align:center;
+        }
+        span{
+        	color:blue;
+        }
+        table tr,td,th{border:1px solid #000;}
+        a{color:#000}
+    </style>
+    </head>
+    <?php
+    switch(date('w')){
+	case 0:$dayStr='日';break;
+	case 1:$dayStr='一';break;
+	case 2:$dayStr='二';break;
+	case 3:$dayStr='三';break;
+	case 4:$dayStr='四';break;
+	case 5:$dayStr='五';break;
+	case 6:$dayStr='六';break;
+	default:$dayStr='非法日期';break;
+}
+echo date('Y年m月d日 ').' 星期'.$dayStr.' '.date('h:i:s');
+echo '<br>';
+    ?>
+    <body>
+        <form method="post" action="post.php">
+      <label for="username">用户名:</label>
+      <input type="text"  name="username" id="username" value="" />
+      <br/>
+      <label for="pass">密码:</label>
+      <input type="password"  name="pass" id="pass" value="" />  
+      <br/>
+      <label for="myName">名字:</label>
+      <input type="text" name="myName" id="myName" value="" >
+      <br/>
+    <label>联系我们</label>
+        <textarea cols="50" rows="10" >在这里输入内容...</textarea>
+        <br/><br/>
+
+        <textarea id="txt1" cols="50" rows="10" >
+Hello world....This is a text area
+</textarea>
+<input type="button" onclick="alertValue()" value="Alert value" />
+<br />
+
+    <label>性别:</label>
+        <labe2>男</labe2>
+        <input type="radio" value="男"  name="gender" />
+        <labe2>女</labe2>
+        <input type="radio" value="女"  name="gender" />
+        <br /><br />
+        你是否喜欢旅行？<br />
+        <input type="radio" name="radioLove" value="喜欢" checked ="checked">喜欢
+        <input type="radio" name="radioLove" value="不喜欢" >不喜欢
+        <input type="radio" name="radioLove" value="无所谓" >无所谓
+        <br /><br />
+        你对那些运动感兴趣？<br />
+        <input type="checkbox" name="checkbox1" value="跑步" checked ="checked">跑步
+        <input type="checkbox" name="checkbox2" value="打球" checked ="checked">打球
+        <input type="checkbox" name="checkbox3" value="登山">登山
+        <input type="checkbox" name="checkbox4" value="健身">健身
+        <br /><br />
+        <label>爱好:</label>
+    <select>
+      <option value="看书">看书</option>
+      <option value="旅游" >旅游</option>
+      <option value="运动">运动</option>
+      <option value="购物">购物</option>
+    </select>
+    <br /><br />
+    <label>爱好:</label>
+    <select multiple="multiple">
+      <option value="看书">看书</option>
+      <option value="旅游">旅游</option>
+      <option value="运动">运动</option>
+      <option value="购物">购物</option>
+    </select>
+    <br /><br />
+
+
+
+
+        <input type="submit" value="确定"  name="submit" />
+      <input type="reset" value="重置" name="reset" />
+</form>
+
+    </body>
+</html>

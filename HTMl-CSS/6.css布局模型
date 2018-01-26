@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>流动模式下的块状元素</title>
+<style type="text/css">
+#box1{
+    width:335px;
+    height:335px;
+    float:left;/*可以用 CSS 定义为浮动，如 div、p、table、img 等元素都可以被定义为浮动。*/
+    margin:20px;
+}
+#box2{
+  width:50px;
+    height:50px;
+  position:absolute;/*绝对定位*/
+    right:100px;
+    top:20px;
+}
+#box3{
+  width:300px;
+    height:300px;
+  position:relative;/*相对定位，（相对于以前位置左上角）向右移动100象素，向下移动100象素。*/
+    left:100px;
+    top:100px;
+      }
+      #box4{
+  width:300px;
+    height:300px;
+  position:fixed;/*固定定位,实现浏览器视图右下角定位*/
+    bottom:0px;
+    right:0px;
+      }
+      #box5{
+     width:80%;
+        position:relative;
+        bottom: 44px;
+    
+}
+div{
+    border:1px solid red;
+}
+</style>
+</head>
+<body style="margin:100px;">
+    <div id="box2">box2</div><!--块状元素，由于没有设置宽度，宽度默认显示为100%--> 
+    <h1>标题</h1><!--块状元素，由于没有设置宽度，宽度默认显示为100%--> 
+    <p>文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段。</p><!--块状元素，由于没有设置宽度，宽度默认显示为100%--> 
+    
+    <div id="box1" }"><p>&nbsp;&nbsp;box1&nbsp;&nbsp;box1&nbsp;&nbsp;box1&nbsp;&nbsp;box1&nbsp;&nbsp;</p></div>
+    <div id="box1" }"><h3 style="text-align:center">标题</h3><p>文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段。</p></div>
+    <div id="box1" }">box1</div>
+    <div id="box1" }">box1</div>
+
+    <!--1、把box5定位到图片(box1)的底部。-->
+    <div id="box1" }">
+      <img src="QQ截图20171029154907.jpg">
+      <div id="box5">当我还是三年级的学生时是一个漂亮的小鸡蛋。</div>
+    </div>
+    <div id="box2" }">box2</div>
+
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <hr />
+    <div id="box3" }">box3:（相对于以前位置左上角）向右移动100象素，向下移动100象素。</div>
+    <hr />
+    <br /><br /><br /><br /><br /><hr />
+    <div id="box4" }">box4</div>
+
+</body>
+</html>

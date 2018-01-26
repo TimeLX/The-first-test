@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>文字排版</title>
+<style type="text/css">
+body{
+	font-family:"Microsoft Yahei";
+	font-size:20px;color:#000
+}/*段落文字设置字体为“微软雅黑”*/
+span{
+	font-family:"宋体";
+	text-decoration:underline;/*下划线*/
+}
+a{font-weight:bold;}/*为a标签设置粗体样式*/
+p a{font-style:italic;}/*斜体样式 */
+.oldPrice{text-decoration:line-through;color:#999}
+p{text-indent:2em;}/*为文本段设置2个空格缩进*/
+p{line-height:1.5em;}/*行间距*/
+h1{letter-spacing:50px;}/*设置字母与字母之间的间距*/
+h2{word-spacing:50px;/*英文单词之间的间距*/
+	text-align:center;/*居中，left局左，局右*/
+}
+
+
+</style>
+
+
+</head>
+<body>
+	<h1>了不起的盖茨比 Hello world!</h1>
+	<h2>welcome to imooc!</h2>
+	<p>乌兰牧骑的<span>蒙古语</span>原意是“红色的嫩芽”，后被引申为“红色文艺轻骑兵”，是适应草原地区生产生活特点而诞生的文化工作队，具有“演出、宣传、辅导、服务”等职能，深受广大农牧民欢迎。<a>1957年</a>，苏尼特右旗建立了内蒙古第一支乌兰牧骑<span class="oldPrice">1999</span>。</p>
+	<p>解放前，苏尼特右旗人民群众的文化生活可以说是空白的，全旗有极少数的民间艺人为王府服务，普通老百姓没有欣赏歌舞的权利。1949年以后，在中国共产党的领导下，苏尼特右旗民间文艺活动开始活跃。同年10月，苏尼特右旗人民政府在温都尔庙成立文化室，组建农牧民业余文艺宣传队。工作重点为宣传党的方针政策和路线，为农牧业生产服务，为普及文化教育服务。由于文化室业余文化宣传队的组织和演出方式不适应牧区地广人稀的特点，1957年，内蒙古自治区文化厅党组决定改造旗县文化室，组织小型、流动、多功能的文艺工作队伍。1957年6月17日，全国第一支乌兰牧骑宣告成立。</p>
+	<p>“过去牧区的路都是勒勒车走出来。”年逾八十的伊兰是乌兰牧骑第一批队员，回忆起当时的情形，她记忆犹新。最初，这支乌兰牧骑只有9名演员，带着马头琴、四胡、三弦等几件简单乐器，他们深入牧区巡回演出，哪怕只有一个农牧民，也会照演不误，受到广大牧民群众的高度赞扬。</p>
+</body>
+</html>
